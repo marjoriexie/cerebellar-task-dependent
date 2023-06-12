@@ -1,0 +1,38 @@
+Copyright (C) 2023 Marjorie Xie and Ashok Litwin-Kumar
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+SUMMARY:
+This repository contains code used in:
+M. Xie, S.P. Muscinelli, K.D. Harris, & A. Litwin-Kumar. Task-dependent optimal representations for cerebellar learning. eLife (2023).
+
+The components are
+(1) script_simulation.py: this script walks through how to set up our model of the granule cell layer presynaptic to a Purkinje cell, how to generate Gaussian process targets, and how to train the model to learn a target. 
+At the top of the script are a list of parameters with default values which you can play with.
+
+(2) script_theory.py: this script walks through the analytic calculation of generalization error given a Gaussian process target and a kernel. These scripts call functions from the libraries below:
+
+(3) networks.py: functions for generating activity in the granule cell layer and fitting the readout weights of the network, given a target. 
+
+(4) sphlib.py: functions needed for performing the decomposition of a kernel function and targets in the spherical harmonic basis.
+
+(5) kernellib.py: functions for computing the kernel of ReLU network analytically and for computing generalization error analytically. 
+
+(6) targets.py: functions for generating Gaussian process targets. 
+
+This software uses Python (python.org). Tested on Python 3.6. 
+
+CONTACT:
+mx2183@columbia.edu
+ak3625@columbia.edu
